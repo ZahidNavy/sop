@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navy Anchorage SOP Q&A</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // or 'media'
+        theme: {
+          extend: {
+            colors: {
+              'navy': {
+                'light': '#2b3e50',
+                'DEFAULT': '#1e2a38',
+                'dark': '#131c25',
+              },
+              'gold': {
+                'light': '#f7d08a',
+                'DEFAULT': '#e6ac55',
+                'dark': '#d48a2a',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "canvg": "https://cdn.jsdelivr.net/npm/canvg@4.0.2/+esm"
+  }
+}
+</script>
+<style>
+  /* Standard Print Styles for Ctrl+P fallback */
+  @media print {
+    @page {
+      margin: 2cm;
+      size: auto;
+    }
+    
+    body {
+      background-color: white !important;
+      color: black !important;
+    }
+
+    /* Hide UI elements */
+    header, footer, button, input, textarea, .no-print {
+      display: none !important;
+    }
+
+    /* Ensure main content is visible and reset constraints */
+    main, #report-content {
+      height: auto !important;
+      overflow: visible !important;
+      display: block !important;
+    }
+
+    /* Force light mode colors for print */
+    * {
+      color: black !important;
+      background-color: transparent !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    /* Ensure links are underlined */
+    a {
+      text-decoration: underline;
+      color: black !important;
+    }
+
+    /* Prevent page breaks inside elements */
+    p, h2, h3 {
+      break-inside: avoid;
+    }
+  }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-100 dark:bg-navy-dark">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

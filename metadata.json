@@ -1,0 +1,7 @@
+{
+  "name": "Navy Anchorage SOP Q&A",
+  "description": "An intelligent assistant to answer questions about the Navy Anchorage School and College Standard Operating Procedures (SOP). Get accurate answers with direct references to the document.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
